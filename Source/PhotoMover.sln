@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{14BAED9C-C71E-40D3-BD3C-8EE6C4C76DC3}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJF.PhotoMover.Service", "AJF.PhotoMover.Service\AJF.PhotoMover.Service.csproj", "{38BCA232-6A5C-457D-886E-A79872F11A01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJF.PhotoMover.Test", "AJF.PhotoMover.Test\AJF.PhotoMover.Test.csproj", "{98FD5B2B-A317-44F2-A96B-C94170B2C841}"

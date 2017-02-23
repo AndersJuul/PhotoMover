@@ -1,0 +1,6 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+    NuGet.CommandLine (3.5)
+    OctoPack (3.5)
+    Serilog (1.5.7)
+    Topshelf (3.1.4)
