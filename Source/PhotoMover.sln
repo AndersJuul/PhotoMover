@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJF.PhotoMover.Selector", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyAndRename", "CopyAndRename\CopyAndRename.csproj", "{BB569DC9-7BC4-4DCB-B842-9F1A3741BF99}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8E9FC75-3A51-4AE0-93B6-4E32925AE5E7}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,26 +47,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://andersjuulsfirma.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AJF.PhotoMover.Service\\AJF.PhotoMover.Service.csproj
-		SccProjectName1 = AJF.PhotoMover.Service
-		SccLocalPath1 = AJF.PhotoMover.Service
-		SccProjectUniqueName2 = AJF.PhotoMover.Test\\AJF.PhotoMover.Test.csproj
-		SccProjectName2 = AJF.PhotoMover.Test
-		SccLocalPath2 = AJF.PhotoMover.Test
-		SccProjectUniqueName3 = AJF.PhotoMover.CopyToFlat\\AJF.PhotoMover.CopyToFlat.csproj
-		SccProjectName3 = AJF.PhotoMover.CopyToFlat
-		SccLocalPath3 = AJF.PhotoMover.CopyToFlat
-		SccProjectUniqueName4 = AJF.PhotoMover.Selector\\AJF.PhotoMover.Selector.csproj
-		SccProjectName4 = AJF.PhotoMover.Selector
-		SccLocalPath4 = AJF.PhotoMover.Selector
-		SccProjectUniqueName5 = CopyAndRename\\CopyAndRename.csproj
-		SccProjectName5 = CopyAndRename
-		SccLocalPath5 = CopyAndRename
 	EndGlobalSection
 EndGlobal
