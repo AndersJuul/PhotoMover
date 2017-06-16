@@ -1,3 +1,5 @@
 OctoPack
 Serilog
 Topshelf
+Serilog.Sinks.ColoredConsole
+Serilog.Sinks.Rollingfile

@@ -1,12 +1,12 @@
 ﻿using AJF.PhotoMover.Service;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace AJF.PhotoMover.Test
 {
-    [TestClass]
+    [TestFixture]
     public class PhotoMoverConfigTests
     {
-        [TestMethod]
+        [Test]
         public void CanBeConstructed()
         {
             var sut = new PhotoMoverConfig {Path = "abc"};

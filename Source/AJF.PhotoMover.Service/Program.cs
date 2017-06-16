@@ -10,7 +10,7 @@ namespace AJF.PhotoMover.Service
         private static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console()
+                .WriteTo.ColoredConsole()
                 .WriteTo.RollingFile(ConfigurationManager.AppSettings["RollingFile"])
                 .CreateLogger();
 
