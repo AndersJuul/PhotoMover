@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using Ajf.Nuget.Logging;
 using Serilog;
 using Topshelf;
 
@@ -9,13 +10,11 @@ namespace AJF.PhotoMover.Service
     {
         private static void Main(string[] args)
         {
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.ColoredConsole()
-                .WriteTo.RollingFile(ConfigurationManager.AppSettings["RollingFile"])
-                .CreateLogger();
+            Log.Logger = StandardLoggerConfigurator.GetEnrichedLogger();
 
             try
             {
+                var appSettings=new AppSettings();
                 HostFactory.Run(x => //1
                 {
                     x.Service<Worker>(s => //2
@@ -65,9 +64,9 @@ namespace AJF.PhotoMover.Service
                     });
                     x.RunAsLocalSystem(); //6
 
-                    x.SetDescription("Flytter fotos fra feks dropbox til NAS"); //7
-                    x.SetDisplayName("AJF.PhotoMover"); //8
-                    x.SetServiceName("AJF.PhotoMover"); //9
+                    x.SetDescription(appSettings.Description); //7
+                    x.SetDisplayName(appSettings.DisplayName); //8
+                    x.SetServiceName(appSettings.ServiceName); //9
                 }); //10        }
             }
             catch (Exception ex)
