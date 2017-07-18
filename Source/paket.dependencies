@@ -1,5 +1,6 @@
 source https://www.myget.org/f/aspnetvnext/api/v2
 source https://www.nuget.org/api/v2/
+source http://ajf-qa-02/nugetserver/nuget
 
 nuget NuGet.CommandLine
 nuget OctoPack 
@@ -8,3 +9,4 @@ nuget Topshelf
 nuget Nunit
 nuget Serilog.Sinks.ColoredConsole
 nuget Serilog.Sinks.Rollingfile
+nuget Ajf.Nuget.Logging
