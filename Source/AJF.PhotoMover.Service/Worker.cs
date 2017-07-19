@@ -214,7 +214,7 @@ namespace AJF.PhotoMover.Service
                 }
                 catch (Exception ex)
                 {
-                    Log.Logger.Error(ex, "Trying to get last writetime on " + enumerateFile);
+                    Log.Logger.Error(ex, $"Tried to get last writetime on {enumerateFile} and add to dict. Ignoring file.");
                 }
             }
 
