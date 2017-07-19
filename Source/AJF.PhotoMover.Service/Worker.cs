@@ -128,8 +128,8 @@ namespace AJF.PhotoMover.Service
                     var hasConnectionToNas = GetHasConnectionToNas(settings);
                     if (!hasConnectionToNas)
                     {
-                        Log.Logger.Information("File found that should be moved but no connection to destination: " +
-                                               settings.Destination);
+                        //Log.Logger.Information("File found that should be moved but no connection to destination: " +
+                        //                       settings.Destination);
                         continue;
                     }
 
@@ -251,6 +251,7 @@ namespace AJF.PhotoMover.Service
             }
             catch (Exception)
             {
+                Log.Logger.Warning("No connection to "+ settings.TestFile);
                 return false;
             }
             return true;
