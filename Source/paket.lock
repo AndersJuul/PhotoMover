@@ -1,6 +1,6 @@
 NUGET
   remote: http://ajf-qa-02/nugetserver/nuget
-    Ajf.Nuget.Logging (1.0.0.32)
+    Ajf.Nuget.Logging (1.0.0.34)
       Serilog (>= 2.5)
       Serilog.Enrichers.Environment (>= 2.1.2)
       Serilog.Sinks.ElasticSearch (>= 5.3)
