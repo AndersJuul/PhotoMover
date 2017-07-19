@@ -85,7 +85,7 @@ namespace AJF.PhotoMover.Service
                     return;
                 }
 
-                Thread.Sleep(1*500);
+                Thread.Sleep(_appSettings.TickSleep);
 
 
                 foreach (var c in _config)
