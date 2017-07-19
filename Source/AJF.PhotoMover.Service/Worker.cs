@@ -15,6 +15,7 @@ namespace AJF.PhotoMover.Service
         private const string ConfigFileName = "photomover.config";
         private BackgroundWorker _backgroundWorker;
         private List<IPhotoMoverConfig> _config;
+        private AppSettings _appSettings;
         public bool WorkDone { get; set; }
 
         public void Start()
@@ -72,6 +73,8 @@ namespace AJF.PhotoMover.Service
         private void DoWorkInternal(object sender)
         {
             WorkDone = false;
+
+            _appSettings = new AppSettings();
 
             while (true)
             {
@@ -157,10 +160,10 @@ namespace AJF.PhotoMover.Service
             }
         }
 
-        private static void MoveOldestToNas(string pathToOldestFile, SettingsWrapper settings)
+        private void MoveOldestToNas(string pathToOldestFile, SettingsWrapper settings)
         {
             var lastWriteTime = File.GetLastWriteTime(pathToOldestFile);
-            Console.WriteLine("Oldest file : " + pathToOldestFile);
+            Log.Logger.Information("Oldest file : " + pathToOldestFile);
 
             var newPath = string.Format(settings.Destination,
                 string.Format("{0:yyyy}", lastWriteTime),
@@ -175,14 +178,19 @@ namespace AJF.PhotoMover.Service
             do
             {
                 destination = newPath + prefix + filename;
-                Console.WriteLine(newPath);
-                Console.WriteLine(destination);
+                Log.Logger.Information(newPath);
+                Log.Logger.Information(destination);
                 prefix += "_";
             } while (File.Exists(destination));
 
             var destinationDir = Path.GetDirectoryName(destination);
             Directory.CreateDirectory(destinationDir);
+            if(_appSettings.PerformMove)
             File.Move(pathToOldestFile, destination);
+            else
+            {
+                Log.Logger.Information("Skipped moving; setting does not allow.");
+            }
         }
 
         private string GetPathToOldestFile(SettingsWrapper settings, IPhotoMoverConfig photoMoverConfig)
