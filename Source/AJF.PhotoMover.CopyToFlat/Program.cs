@@ -6,7 +6,7 @@ namespace AJF.PhotoMover.CopyToFlat
 {
     internal class Program
     {
-        const string SourceDir = @"D:\Pixum\Pixum2016LondonVic\Raw\";
+        const string SourceDir = @"D:\Raw\";
         private static void Main(string[] args)
         {
 

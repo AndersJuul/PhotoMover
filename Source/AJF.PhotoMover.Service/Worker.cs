@@ -168,7 +168,8 @@ namespace AJF.PhotoMover.Service
             var newPath = string.Format(settings.Destination,
                 string.Format("{0:yyyy}", lastWriteTime),
                 string.Format("{0:MM}", lastWriteTime),
-                string.Format("{0:dd}", lastWriteTime)
+                string.Format("{0:dd}", lastWriteTime),
+                pathToOldestFile
                 );
 
             var filename = Path.GetFileName(pathToOldestFile);
