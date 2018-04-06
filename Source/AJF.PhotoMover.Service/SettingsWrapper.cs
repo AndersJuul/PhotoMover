@@ -52,6 +52,22 @@ namespace AJF.PhotoMover.Service
             }
         }
 
+        public string NewExtension
+        {
+            get
+            {
+                var xmlNodeList = _xmlSettings.SelectNodes("/Settings/NewExtension");
+                if (xmlNodeList.Count==0)
+                    return null;
+
+                var xmlNode = xmlNodeList[0];
+                var xmlAttribute = xmlNode.Attributes["value"];
+                var value = xmlAttribute.Value;
+
+                return value;
+            }
+        }
+
         public int MinAgeHours
         {
             get

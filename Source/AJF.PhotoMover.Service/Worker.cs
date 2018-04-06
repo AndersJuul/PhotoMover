@@ -173,6 +173,11 @@ namespace AJF.PhotoMover.Service
                 );
 
             var filename = Path.GetFileName(pathToOldestFile);
+            if(!string.IsNullOrEmpty (settings.NewExtension))
+            {
+                var ext = Path.GetExtension(pathToOldestFile);
+                filename = filename.Replace(ext, "."+settings.NewExtension);
+            }
 
             var prefix = "";
             string destination;
