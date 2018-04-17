@@ -105,7 +105,7 @@ namespace AJF.PhotoMover.Service
                     }
                     catch (Exception ex)
                     {
-                        Log.Logger.Information("Could not read settings from " + c.Path + " : " + ex.Message);
+                        Log.Logger.Error(ex, "Could not read settings from " + c.Path + " : ");
                         continue;
                     }
 
